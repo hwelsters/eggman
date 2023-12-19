@@ -11,11 +11,15 @@ CMake
 `cpplint --recursive src include`
 
 # Building:
-1. Configure
-`cmake -B out/build -G "Visual Studio 17 2022"`
+1. Windows
+```bash
+bash scripts/windows/run.sh
+```
 
-2. Build
-`cmake --build out/build --config Release`
+2. Linux
+```bash
+bash scripts/linux/run.sh
+```
 
 Both in one script
 
