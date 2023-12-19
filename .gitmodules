@@ -1,0 +1,3 @@
+[submodule "libs/egg"]
+	path = libs/egg
+	url = https://github.com/hwelsters/egg-engine
