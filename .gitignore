@@ -1,0 +1,10 @@
+/build
+
+# Python specific
+/venv
+
+# Conan specific
+conan.lock
+conanbuildinfo.txt
+conaninfo.txt
+graph_info.json
