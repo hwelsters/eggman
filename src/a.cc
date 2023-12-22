@@ -6,9 +6,7 @@
 
 class Eggman : public egg::Application {
  public:
-  Eggman() {
-    std::cout << "binks";
-  }
+  Eggman() {}
   ~Eggman() {}
 };
 
