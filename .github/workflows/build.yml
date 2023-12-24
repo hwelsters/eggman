@@ -1,0 +1,25 @@
+name: Build files
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    strategy:
+        matrix:
+          os: [windows-latest, ubuntu-latest]
+
+    runs-on: ${{matrix.os}}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: git submodule update --recursive
+      
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        if: matrix.os == 'windows-latest'
+        run: sh scripts/window/run.sh
+      
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        if: matrix.os == 'ubuntu-latest'
+        run: sh scripts/ubuntu/run.sh
