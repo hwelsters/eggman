@@ -12,14 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
-        run: git submodule update --recursive
+        run: git submodule update --recursive --init
       
       - uses: actions/checkout@v4
-      - name: Install dependencies
-        if: matrix.os == 'windows-latest'
-        run: sh scripts/window/run.sh
+      - name: Make
+        run: sh scripts/${{matrix.os}}/run.sh
       
-      - uses: actions/checkout@v4
-      - name: Install dependencies
-        if: matrix.os == 'ubuntu-latest'
-        run: sh scripts/ubuntu/run.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{matrix.os}}
+          path: out

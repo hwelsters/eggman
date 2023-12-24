@@ -13,12 +13,12 @@ CMake
 # Building:
 1. Windows
 ```bash
-bash scripts/windows/run.sh
+bash scripts/windows-latest/run.sh
 ```
 
-2. Linux
+2. Ubuntu
 ```bash
-bash scripts/linux/run.sh
+bash scripts/ubuntu-latest/run.sh
 ```
 
 Both in one script
